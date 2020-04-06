@@ -8,7 +8,7 @@ LimitNOFILE=65536
 #Environment='JAVA_HOME={{jdk_basedir}}/{{jdk_version}}'
 ExecStart=/opt/scm-server/bin/scm-server start
 ExecStop=/opt/scm-server/bin/scm-server stop
-User="{{scmmanager_user}}"
+User={{scmmanager_user}}
 Restart=on-abort
 
 [Install]
