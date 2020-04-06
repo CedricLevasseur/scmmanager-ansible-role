@@ -1,6 +1,12 @@
 ---
 - include_tasks: "{{ansible_os_family}}.yml"
 
+- name: Create service user
+  user:
+    name: "{{scmmanager_user}}"
+    state: present
+    system: yes
+
 - name: Copy service template
   template:
     src: scmmanager.service

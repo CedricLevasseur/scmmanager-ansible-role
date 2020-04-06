@@ -1,2 +1,2 @@
 ---
-# defaults file for scmmanager
+scmmanager_user:        scmmanager        # Os system user to run the service
