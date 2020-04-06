@@ -1,0 +1,6 @@
+---
+- name: Restart scmmanager service
+  service:
+    name: scmmanager
+    state: restarted
+    

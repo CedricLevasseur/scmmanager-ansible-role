@@ -1,0 +1,15 @@
+[Unit]
+Description=scmmanager service
+After=network.target
+
+[Service]
+Type=forking
+LimitNOFILE=65536
+#Environment='JAVA_HOME={{jdk_basedir}}/{{jdk_version}}'
+ExecStart=/opt/scm-server/bin/scm-server start
+ExecStop=/opt/scm-server/bin/scm-server stop
+User=root
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
