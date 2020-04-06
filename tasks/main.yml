@@ -14,6 +14,7 @@
     creates: /opt/scm-server
     owner: "{{scmmanager_user}}"
     group: "{{scmmanager_user}}"
+    mode: 0755
   
 - name: Copy service template
   template:
