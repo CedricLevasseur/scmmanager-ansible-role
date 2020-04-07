@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<user-db>
+    <creationTime>1586213678692</creationTime>
+    <lastModified>1586214011448</lastModified>
+    <users>
+        <user>
+            <properties/>
+            <admin>false</admin>
+            <creationDate>1586213678700</creationDate>
+            <displayName>SCM Anonymous</displayName>
+            <mail>scm-anonymous@scm-manager.com</mail>
+            <name>anonymous</name>
+            <type>xml</type>
+        </user>
+        <user>
+            <properties/>
+            <admin>true</admin>
+            <creationDate>1586213678699</creationDate>
+            <displayName>SCM Administrator</displayName>
+            <lastModified>1586214011448</lastModified>
+            <mail>scm-admin@scm-manager.com</mail>
+            <name>{{scmmanager_admin_user}}</name>
+            <password>{{vault_scmmanager_password|password_hash('sha1')}}</password>
+            <type>xml</type>
+        </user>
+    </users>
+</user-db>

@@ -29,4 +29,12 @@
     name: scmmanager
     enabled: yes
     daemon_reload: yes
+  
+- name: Copy users config
+  template:
+    src: users.xml
+    dest: "/home/{{scmmanager_user}}/.scm/config/"
+    owner: "{{scmmanager_user}}"
+    group: "{{scmmanager_user}}"
+    mode: 0644
   notify: Restart scmmanager service

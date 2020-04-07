@@ -10,7 +10,8 @@ Role Variables
 --------------
 This role requires the following variables to be defined elsewhere in the playbook that uses it:
 ```yaml
-  TODO
+  scmmanager_admin_user:        admin      # Webconsole admin user name
+  vault_scmmanager_password                # Webconsole admin user password. It should be encryted in vault
 ```
 
 All of them are already defined in /defaults/main.yml, feel free to overwrite them
