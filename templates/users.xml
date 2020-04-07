@@ -20,7 +20,7 @@
             <lastModified>1586214011448</lastModified>
             <mail>scm-admin@scm-manager.com</mail>
             <name>{{scmmanager_admin_user}}</name>
-            <password>{{vault_scmmanager_password|password_hash('sha1')}}</password>
+            <password>{{vault_scmmanager_password|hash('sha1')}}</password>
             <type>xml</type>
         </user>
     </users>
