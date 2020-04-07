@@ -37,4 +37,11 @@
     owner: "{{scmmanager_user}}"
     group: "{{scmmanager_user}}"
     mode: 0644
+
+- name: Install plugins
+  uri:
+    url: http://localhost:8080/scm/api/rest/plugins/install/scm-activedirectory-auth-plugin
+    user: admin
+    password: admin
+    method: POST
   notify: Restart scmmanager service
