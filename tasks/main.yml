@@ -38,13 +38,16 @@
     group: "{{scmmanager_user}}"
     mode: 0644
 
+- name: Start service
+  service:
+    name: scmmanager
+    state: started
+
 - name: Install plugins
   uri:
-    url: http://localhost:8080/scm/api/rest/plugins/install/scm-activedirectory-auth-plugin
+    url: http://localhost:8080/scm/api/rest/plugins/install/scm-auth-ldap-plugin
+    user: admin
+    password: admin
+    force_basic_auth: yes
     method: POST
-    body_format: form-urlencoded
-    body:
-      username: admin
-      password: admin
-      enter: Login
   notify: Restart scmmanager service
