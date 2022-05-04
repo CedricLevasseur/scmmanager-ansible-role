@@ -1,2 +1,3 @@
 ---
 scmmanager_user:        scmmanager        # Os system user to run the service
+scmmanager_url: "https://packages.scm-manager.org/repository/public/sonia/scm/packaging/unix/{{ scmmanager_version }}/unix-{{ scmmanager_version }}.tar.gz"

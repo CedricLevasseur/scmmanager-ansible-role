@@ -8,6 +8,7 @@
 - name: Download and uncompress server tarball
   unarchive:
     src: "https://maven.scm-manager.org/nexus/content/repositories/releases/sonia/scm//scm-server/{{scmmanager_version}}/scm-server-{{scmmanager_version}}-app.tar.gz"
+    src: "{{ scmmanager_url }}"
     dest: /opt
     remote_src: yes
     validate_certs: no
